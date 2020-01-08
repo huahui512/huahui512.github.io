@@ -24,9 +24,9 @@
 			.warp {width:1000px; margin:0 auto;}
 			#big_box{width:100%; min-width:1000px; overflow:hidden;}
 			.header{background:#bd0006;}
-			.logo_box{display:flex;justify-content:space-around;align-items:center;width:100%;padding:20px 0q}
-			.title{width:20%;vertical-align:middle;text-align:center;}
-			.title img{max-width:100%;}
+			.logo_box{display:flex;justify-content:space-around;align-items:center;width:100%;padding:20px 0}
+			.title{width:100%;vertical-align:middle;text-align:center;}
+			.title img{width: 50px;}
 			.title p{line-height:35px;}
 			.logo{
 				width: 41px;
@@ -36,14 +36,6 @@
 			}
 			.phone{width:80%;text-align:right;height:33px;line-height:33px;color:#fff;font-size:22px;font-family:'Microsoft YaHei'; padding-left:40px;}
 			.phone img{margin-right:5px;}
-			@media(max-width:991px){
-			    .biaoyu{display:none;}
-			    .phone{font-size:18px;}
-			}
-			@media(max-width:767px){
-			    .phone{display:none;}
-			    .logo{width:100%;text-align:center;}
-			}
 			.foot {
 			    width: 100%;
 			    background: #bd0006;
@@ -64,9 +56,9 @@
 			.item img {width: 100%; height: 100%;}
 			.main{
 				width:100%;
-				min-height:550px;
 				padding:3% 20% 6% 20%;
 				display:flex;
+				min-height:550px;
 				background:#f6f4f4;
 			}
 			.left ul li{
@@ -102,6 +94,61 @@
 			}
 			.mt-20{margin-top:20px;}
 			.contact_us p{text-indent:24px;font-size:15px;line-height:30px}
+			#l-map{
+				width:100%;height:300px;font-size:12px;margin-left:20px; 
+			}
+			.help-line{display:none;}
+			/*移动端样式*/
+			@media(max-width:991px){
+			    .biaoyu{display:none;}
+			    .phone{font-size:18px;}
+			}
+			@media(max-width:767px){
+			    .phone{display:none;}
+			    .logo{width:100%;text-align:center;}
+			}
+			@media(max-width:991px){
+				.logo_box{padding:15px 0}
+				.title{font-size:24px;}
+				.title img{width: 40px;}
+			    .carousel-inner{height:120px;}
+			    .item img {width: 100%; height: 100%;}
+			    .main{
+			    	display:block;
+			    	padding:0 10px;
+			    	min-height:650px;
+			    	margin-bottom:5%;
+			    }
+			    .box img,.box2 img{margin-bottom:10px}
+			    .box2{margin-top:0}
+			    .show-product{padding-bottom:17%}
+			    .main ul li{
+			    	float:left;
+			    	width:24%;
+			    	margin:15px 1% 0 0;
+			    }
+			    .main ul li:last-child{margin-right:0}
+			    .right{clear:both;padding:20px;}
+			    #l-map{height:200px;margin-left:0;}
+			    .contact_us p{text-indent:0}
+			    .help-line{
+					position: fixed;
+					display:block;
+					bottom: 30px;
+					right: 30px;
+					margin-top: 0;
+					z-index: 999;
+					width: 30px;
+				    height: 30px;
+				}
+				.help-line img{
+					width: 40px;
+				    height: 40px;
+				    border-radius: 50%;
+                    -webkit-border-radius: 50%;
+				}
+			}
+			.carousel-inner>.item>a>img{height:120px !important}
 		</style>
 	</head>
 	<body>
@@ -184,68 +231,68 @@
 				</div>
 				<div class="right-item right2">
 					<div class="name">产品展示</div>
-					<div>
+					<div class="show-product">
 						<div class="row box mt-20">
-				            <div class="col-xs-4 col-md-4 col-lg-3">
-				                <img src="https://github.com/huahui512/huahui512.github.io/blob/master/demo1.jpg?raw=true" alt=""/>
+				            <div class="col-md-4 col-lg-3">
+				                <img class="img-responsive img-thumbnail" src="https://github.com/huahui512/huahui512.github.io/blob/master/demo1.jpg?raw=true" alt=""/>
 				            </div>
-				            <div class="col-xs-4col-md-4 col-lg-3">
-				                <img src="https://github.com/huahui512/huahui512.github.io/blob/master/demo2.jpg?raw=true" alt=""/>
+				            <div class="col-md-4 col-lg-3">
+				                <img class="img-responsive img-thumbnail" src="https://github.com/huahui512/huahui512.github.io/blob/master/demo2.jpg?raw=true" alt=""/>
 				            </div>
-				            <div class="col-xs-4 col-md-4 col-lg-3">
-				                <img src="https://github.com/huahui512/huahui512.github.io/blob/master/demo1.jpg?raw=true" alt=""/>
+				            <div class="col-md-4 col-lg-3">
+				                <img class="img-responsive img-thumbnail" src="https://github.com/huahui512/huahui512.github.io/blob/master/demo1.jpg?raw=true" alt=""/>
 				            </div>
-				            <div class="col-xs-4col-md-4 col-lg-3">
-				                <img src="https://github.com/huahui512/huahui512.github.io/blob/master/demo2.jpg?raw=true" alt=""/>
+				            <div class="col-md-4 col-lg-3">
+				                <img class="img-responsive img-thumbnail" src="https://github.com/huahui512/huahui512.github.io/blob/master/demo2.jpg?raw=true" alt=""/>
 				            </div>
 				        </div>
-				        <div class="row box mt-20">
-				            <div class="col-xs-4 col-md-4 col-lg-3">
-				                <img src="https://github.com/huahui512/huahui512.github.io/blob/master/demo1.jpg?raw=true" alt=""/>
+				       <div class="row box2 mt-20">
+				            <div class="col-md-4 col-lg-3">
+				                <img class="img-responsive img-thumbnail" src="https://github.com/huahui512/huahui512.github.io/blob/master/demo1.jpg?raw=true" alt=""/>
 				            </div>
-				            <div class="col-xs-4 col-md-4 col-lg-3">
-				                <img src="https://github.com/huahui512/huahui512.github.io/blob/master/demo2.jpg?raw=true" alt=""/>
+				            <div class="col-md-4 col-lg-3">
+				                <img class="img-responsive img-thumbnail" src="https://github.com/huahui512/huahui512.github.io/blob/master/demo2.jpg?raw=true" alt=""/>
 				            </div>
-				             <div class="col-xs-4 col-md-4 col-lg-3">
-				                <img src="https://github.com/huahui512/huahui512.github.io/blob/master/demo1.jpg?raw=true" alt=""/>
+				            <div class=" col-md-4 col-lg-3">
+				                <img class="img-responsive img-thumbnail" src="https://github.com/huahui512/huahui512.github.io/blob/master/demo1.jpg?raw=true" alt=""/>
 				            </div>
-				            <div class="col-xs-4col-md-4 col-lg-3">
-				                <img src="https://github.com/huahui512/huahui512.github.io/blob/master/demo2.jpg?raw=true" alt=""/>
+				            <div class="col-md-4 col-lg-3">
+				                <img class="img-responsive img-thumbnail" src="https://github.com/huahui512/huahui512.github.io/blob/master/demo2.jpg?raw=true" alt=""/>
 				            </div>
 				        </div>
 					</div>
 				</div>
 				<div class="right-item right3">
 					<div class="name">安装实例</div>
-					<div>
+					<div class="show-product">
 						<div class="row box mt-20">
-				            <div class="col-xs-4 col-md-4 col-lg-3">
-				                <img src="https://github.com/huahui512/huahui512.github.io/blob/master/example1.jpg?raw=true" alt=""/>
+				            <div class="col-md-4 col-lg-3">
+				                <img class="img-responsive img-thumbnail" src="https://github.com/huahui512/huahui512.github.io/blob/master/example1.jpg?raw=true" alt=""/>
 				            </div>
-				            <div class="col-xs-4 col-md-4 col-lg-3">
-				                <img src="https://github.com/huahui512/huahui512.github.io/blob/master/example2.jpg?raw=true" alt=""/>
+				            <div class="col-md-4 col-lg-3">
+				                <img class="img-responsive img-thumbnail" src="https://github.com/huahui512/huahui512.github.io/blob/master/example2.jpg?raw=true" alt=""/>
 				            </div>
-				             <div class="col-xs-4 col-md-4 col-lg-3">
-				                <img src="https://github.com/huahui512/huahui512.github.io/blob/master/example1.jpg?raw=true" alt=""/>
+				            <div class="col-md-4 col-lg-3">
+				                <img class="img-responsive img-thumbnail" src="https://github.com/huahui512/huahui512.github.io/blob/master/example1.jpg?raw=true" alt=""/>
 				            </div>
-				            <div class="col-xs-4col-md-4 col-lg-3">
-				                <img src="https://github.com/huahui512/huahui512.github.io/blob/master/example2.jpg?raw=true" alt=""/>
-				            </div>
-				        </div>
-				        <div class="row box mt-20">
-				            <div class="col-xs-4 col-md-4 col-lg-3">
-				                <img src="https://github.com/huahui512/huahui512.github.io/blob/master/example1.jpg?raw=true" alt=""/>
-				            </div>
-				            <div class="col-xs-4 col-md-4 col-lg-3">
-				                <img src="https://github.com/huahui512/huahui512.github.io/blob/master/example2.jpg?raw=true" alt=""/>
-				            </div>
-				             <div class="col-xs-4 col-md-4 col-lg-3">
-				                <img src="https://github.com/huahui512/huahui512.github.io/blob/master/example1.jpg?raw=true" alt=""/>
-				            </div>
-				            <div class="col-xs-4col-md-4 col-lg-3">
-				                <img src="https://github.com/huahui512/huahui512.github.io/blob/master/example2.jpg?raw=true" alt=""/>
+				            <div class="col-md-4 col-lg-3">
+				                <img class="img-responsive img-thumbnail" src="https://github.com/huahui512/huahui512.github.io/blob/master/example2.jpg?raw=true" alt=""/>
 				            </div>
 				        </div>
+				       <div class="row box2 mt-20">
+				            <div class="col-md-4 col-lg-3">
+				                <img class="img-responsive img-thumbnail" src="https://github.com/huahui512/huahui512.github.io/blob/master/example1.jpg?raw=true" alt=""/>
+				            </div>
+				            <div class="col-md-4 col-lg-3">
+				                <img class="img-responsive img-thumbnail" src="https://github.com/huahui512/huahui512.github.io/blob/master/example2.jpg?raw=true" alt=""/>
+				            </div>
+				            <div class=" col-md-4 col-lg-3">
+				                <img class="img-responsive img-thumbnail" src="https://github.com/huahui512/huahui512.github.io/blob/master/example1.jpg?raw=true" alt=""/>
+				            </div>
+				            <div class="col-md-4 col-lg-3">
+				                <img class="img-responsive img-thumbnail" src="https://github.com/huahui512/huahui512.github.io/blob/master/example2.jpg?raw=true" alt=""/>
+				            </div>
+				       </div>
 					</div>
 				</div>
 			    <!--联系我们-->
@@ -254,10 +301,14 @@
 			    	<div class="contact_us mt-20">
 			    		<p>福顺门业</p><p>联系人：王经理</p><p>手机：17367972529</p>
 			    		<p>地址：河北省石家庄市长安区谈固大街白佛客运站东精艺广告</p><p><br></p>
-			    		<div id="l-map" style="width:100%;height:300px;font-size:12px;margin-left:20px;" ></div>
+			    		<div id="l-map"></div>
 			    	</div>
 			    </div>
 			</div>
+			<!--客服-->
+		    <div class="help-line" onclick="myFunction()">
+		    	<img src="https://github.com/huahui512/huahui512.github.io/blob/master/phone.jpg?raw=true">
+		    </div>
 		</div>
 		<div class="foot" id="footer">
 			<div class="container">
@@ -325,6 +376,10 @@
 					
 				}
 		   })
+			//调起电话
+			function myFunction() {
+				window.location.href = "tel:173-6797-2529";
+			}
 		</script>
 	</body>
 </html>
